@@ -56,22 +56,18 @@ const OReact = {
 const rootDiv = document.getElementById("root");
 
 /** @jsx OReact.createElement */
-// const element = (
-//   <div style="background: red">
-//     <h1>YOYO</h1>
-//     <h2 style="text-align:right">from OReact</h2>
-//   </div>
-// );
-
-/** @jsx OReact.createElement */
 function MyApp() {
   const items = [];
   for (let i = 0; i < 10; i++) {
-    items.push(<div>my name is {i}</div>);
+    items.push(
+      <div style="color: blue">
+        my name is <span style="color:orange">{i}</span>
+      </div>
+    );
   }
   return (
     <div>
-      Items:
+      <p style="color: red">Items:</p>
       <br />
       {items}
       <button onClick="alert(1)">asd</button>
